@@ -1,0 +1,3 @@
+
+<button bindtap='onPathTap'>点击导航</button>
+<!-- <audio id='myAudio' src='https://tsn.baidu.com/text2audio?lan=zh&ctp=1&cuid=szLKuP7717FxwojLp1sKMkjs&tok=24.f0b20295353becaa6ccb034e9130ee8c.2592000.1527574876.282335-11172785&tex=%E5%8F%B3%E8%BD%AC&vol=9&per=3&spd=5&pit=5'  ></audio> -->

@@ -1,0 +1,53 @@
+.path-list {
+  width: 95%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.path-container {
+  margin: auto 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background: #fff
+}
+
+.icon {
+  position: relative;
+  left: 40rpx;
+  width: 55rpx;
+  height: 55rpx;
+  margin: auto 0;
+}
+
+.path-program {
+  display: block;
+  font-size: 13pt;
+  color: #353535;
+  padding: 10rpx 0;
+  margin: auto 0 auto 55rpx;
+}
+
+.path-childen {
+  width: 90%;
+  height: 100rpx;
+  border-left: 1rpx solid #1296db;
+  margin-left: 10%;
+  display: flex;
+}
+.childen-item{
+  display: flex;
+  flex-direction: column;
+  margin: auto 35rpx;
+  font-size: 11pt;
+}
+.instruction{
+  color: #353535;
+  margin: auto 0
+}
+.dir_desc{
+  color: #888888;
+  margin: auto 0
+}

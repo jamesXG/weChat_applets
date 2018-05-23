@@ -1,0 +1,7 @@
+<import src="../../tpl/paths/paths.wxml" />
+<view class="container">
+  <template is="path" data="{{pathList: pathList}}"/>
+<view class='button' bindtap='openApp'>
+  <text>导航</text>
+</view>
+</view>

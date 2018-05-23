@@ -1,0 +1,26 @@
+<view class='container'>
+  <view class='main'>
+    <!-- 明德任责 -->
+    <view class='banner'>
+      <swiper indicator-dots="true" autoplay="true" class="swiper" indicator-active-color="#fff" circular="true">
+        <block wx:for="{{banner}}" wx:key="{{item.id}}">
+          <swiper-item class="banner-item" data-id="{{item.id}}">
+            <image class="item-image" src="{{item.image.url}}" mode="aspectFill" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class='location-name'>
+      <view class='item'>
+        <text class='name'>{{detailInfo.detail.name}}</text>
+        <text class='eng_name'>{{detailInfo.detail.name_eng}}</text>
+      </view>
+      <image catchtap='toMapTap' class='item navigation-img' src='{{navigationIcon}}'></image>
+    </view>
+    <view class='detail'>
+      <text class='detail-text'>
+        {{detailInfo.detail.detail}}
+      </text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,34 @@
+<view class='container'>
+  <view class='main'>
+    <view class='path-nav'>
+      <view class='nav-item' bindtouchstart="onSwitchTap" data-type='car'>
+        <image wx:if="{{isCar}}" class='item-img' src='../../image/icon/car-s.png'></image>
+        <image wx:else class='item-img' src='../../image/icon/car.png'></image>
+      </view>
+      <view class='nav-item' bindtouchstart="onSwitchTap" data-type='walk'>
+        <image wx:if="{{isWalk}}" class='item-img' src='../../image/icon/walk-s.png'></image>
+        <image wx:else class='item-img' src='../../image/icon/walk.png'></image>
+      </view>
+      <view class='nav-item' bindtouchstart="onSwitchTap" data-type='bus'>
+        <image wx:if="{{isBus}}" class='item-img' src='../../image/icon/bus-s.png'></image>
+        <image wx:else class='item-img' src='../../image/icon/bus.png'></image>
+      </view>
+    </view>
+    <view class='map-main'>
+      <map id="map-container" class="map" latitude='{{Lat}}' longitude='{{Lon}}' scale='{{mapScale}}' polyline='{{polyline}}' markers='{{pathArr}}' show-location bindupdated="includePoints"></map>
+    </view>
+    <swiper class='path-detail-swiper'>
+      <swiper-item class="swiper-item">
+        <view class='path-detail'>
+          <view class='detail-content'>
+            <text class='time'>{{duration}}</text>
+            <text class='distance'>{{distance}}</text>
+          </view>
+          <view wx:if="{{!hidden}}" class='button' hover-class="button-click" bindtouchstart='onDetail'>
+            <text>详情</text>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

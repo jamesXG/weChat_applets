@@ -1,0 +1,12 @@
+<view class='container'>
+  <view class='main'>
+    <view class='navigate'>
+      <view class='item' catchtap='onDetailTap'>
+        <text>简介</text>
+      </view>
+      <view class='item' catchtap='onMapTap'>
+        <text>导航</text>
+      </view>
+    </view>
+  </view>
+</view>

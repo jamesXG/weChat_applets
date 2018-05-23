@@ -1,0 +1,23 @@
+@import "../../tpl/paths/paths.wxss";
+.container{
+    /* position: absolute; */
+    height: 100%;
+    background: #eee;
+    padding: 20rpx 0;
+}
+.button {
+    width: 100rpx;
+    height: 70rpx;
+    background: #0090ff;
+    color: #fff;
+    font-size: 11pt;
+    border-radius: 10rpx;
+    display: flex;
+    margin-top: 20rpx;
+    position: relative;
+    left: 80%;
+  }
+  
+  .button>text {
+    margin: auto
+  }

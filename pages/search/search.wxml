@@ -1,0 +1,23 @@
+<import src="../tpl/list/list.wxml" />
+<view class='container'>
+  <view class='search'>
+    <!--搜索图标  -->
+    <view class='search-icon'>
+      <icon class='icon' type="search" size="20" />
+    </view>
+    <input type='text' bindinput="onSearchContent" value='{{content}}' class='search-input' placeholder="输入地点名称或关键词" confirm-type="search" placeholder-style="color: #b2b2b2;font-size: 10pt" focus bindconfirm="startSearch" />
+    <!--清空图标  -->
+    <view class='clear-icon'>
+      <icon class='icon' bindtap='clearInput' type="cancel" size="20" wx:if="{{closeShowStatus}}" />
+    </view>
+  </view>
+  <view class='search-list' wx:if="{{listShowStatus}}">
+    <template is="locationList" data="{{data:contentList}}" />
+    <view class='footer'>——我们是有底线的——</view>
+  </view>
+  <!--搜索为空时显示  -->
+  <view class='search-null' wx:if="{{searchStatus}}">
+    <image src='{{nullImg}}'></image>
+    <text>找不到相关内容</text>
+  </view>
+</view>

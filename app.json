@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/campus/campus",
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/search/search",
+    "pages/path/path",
+    "pages/navigate/navigate",
+    "pages/path/detail/detail",
+    "pages/bus/bus",
+    "pages/bus/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "black",
+    "navigationBarBackgroundColor": "#4E7FC4",
+    "navigationBarTitleText": "河南理工大学",
+    "navigationBarTextStyle": "white"
+  }
+}

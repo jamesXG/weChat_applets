@@ -1,0 +1,17 @@
+<template name="path">
+  <view class="path-list" wx:for="{{pathList}}" wx:key="unique">
+    <view class="path-container">
+      <image wx:if="{{index == 0}}" class="icon" src="../../../image/icon/start-point.png"/>
+      <image wx:elif="{{index == pathList.length - 1}}" class="icon" src="../../../image/icon/end-point.png"/>
+       <image wx:else class="icon" src="../../../image/icon/tu.png"/>
+      <text class="path-program">{{item.road_name || item.instruction}}</text>
+      <text class="path-program" wx:if="{{index == pathList.length - 1}}">到达终点</text>
+    </view>
+    <view wx:if="{{index != pathList.length - 1}}" class="path-childen">
+      <view class="childen-item">
+        <text class="instruction">{{item.instruction}}</text>
+        <text class="dir_desc">{{item.dir_desc}}</text>
+      </view>
+    </view>
+  </view>
+</template>

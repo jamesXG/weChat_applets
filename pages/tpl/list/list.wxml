@@ -1,0 +1,12 @@
+<template name="locationList">
+  <view class='list-item' wx:for="{{data}}" wx:key="item.id" id="view-{{item.id}}">
+    <view class='list-item-main' data-listid='{{item.id}}' bindtap="onMarkerDetail">
+      <image class='item-img' src='{{item.image.url}}'></image>
+      <view class='item-name'>
+        <text wx:if="{{avtive!=item.id}}">{{item.name}}</text>
+        <text wx:else class='list-item-active'>{{item.name}}</text>
+      </view>
+    </view>
+    <image bindtap='startPosition' data-info='{{item.coordinate_items}}' class='navigation-img' src='../../image/icon/navigation.png'></image>
+  </view>
+</template>sa

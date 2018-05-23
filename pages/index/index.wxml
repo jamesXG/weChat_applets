@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<import src="../tpl/list/list.wxml" />
+<view class='container'>
+  <view class='map-main'>
+    <view class='scroll-main'>
+      <scroll-view class="scroll" scroll-x="true" scroll-with-animatio="true">
+        <view class="scroll-item" wx:for="{{SortList}}" wx:key="{{item.id}}">
+          <text wx:if="{{sortId==item.id}}" class='active'>{{item.name}}</text>
+          <text wx:else bindtap="onSortTap" data-id="{{item.id}}">{{item.name}}</text>
+        </view>
+      </scroll-view>
+    </view>
+    <view class='main' style='height:{{second_height}}rpx'>
+      <map id='map-container' class="map" bindmarkertap="onMarkerTap" longitude="{{currentLon}}" latitude="{{currentLat}}" markers="{{locationArr}}" scale="{{mapScale}}" controls="{{controls}}" bindcontroltap='onControlsTap' bindtap="closeList" polyline="{{polyline}}"
+        show-location wx:if="{{showIndexMap}}" />
+    </view>
+    <view class='locatioin-list' style="height:{{listHeight}}rpx">
+      <view class='listTop' bindtap="onCloseList">
+        <text class='count'>共有{{listArr.length}}个点位</text>
+        <image wx:if="{{showList}}" class='topImg' src="../../image/icon/drop.png"></image>
+        <image wx:else class='topImg rotate' src="../../image/icon/drop.png"></image>
+      </view>
+      <scroll-view wx:if="{{showList}}" scroll-y="true" class='list-scroll' scroll-with-animation="true" scroll-into-view="view-{{toView}}">
+        <template is="locationList" data="{{data:listArr,avtive:toView}}" />
+      </scroll-view>
+    </view>
+  </view>
+</view>

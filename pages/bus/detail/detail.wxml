@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="path-list" wx:for="{{busPath}}" wx:key="{{item.id}}">
+    <view class="path-container">
+      <image wx:if="{{index == 0}}" class="icon" src="../../../image/icon/start-point.png" />
+      <image wx:elif="{{index == busPath.length - 1}}" class="icon" src="../../../image/icon/end-point.png" />
+      <image wx:elif="{{item.mode == 'WALKING'}}" class="icon" src="../../../image/icon/tu.png" />
+      <image wx:elif="{{item.mode == 'TRANSIT'}}" class="icon" src="../../../image/icon/bus-icon.png" />
+      <text wx:if="{{item.mode == 'WALKING'}}" class="path-program">{{item.road_name || '继续行进'}}</text>
+      <text wx:if="{{item.mode == 'TRANSIT'}}" class="path-program">{{item.getOn}}</text>
+      <text class="path-program" wx:if="{{index == busPath.length - 1}}">到达终点</text>
+    </view>
+    <view wx:if="{{index != busPath.length - 1}}" class="path-childen">
+      <view wx:if="{{item.mode == 'WALKING'}}" class="childen-item">
+        <text class="instruction">{{item.instruction}}</text>
+        <text class="dir_desc">{{item.dir_desc}}</text>
+      </view>
+      <view wx:if="{{item.mode == 'TRANSIT'}}" class="childen-item">
+        <text class="instruction">在{{item.getOn}}上车</text>
+        <text class="dir_desc">在{{item.getOff}}下车 | {{item.station_count}}站</text>
+      </view>
+    </view>
+  </view>
+</view>

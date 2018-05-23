@@ -1,0 +1,15 @@
+<!--pages/detail/detail.wxml 地点详情页-->
+<view class='container'>
+  <view class='detail-main'>
+    <image class='image-main' src='{{detail.image.url}}'></image>
+    <view class='location-name'>
+      <text>{{detail.name}}</text>
+      <image bindtap='startPosition' data-info='{{detail.coordinate_items}}' class='navigation-img' src='{{navigationIcon}}'></image>
+    </view>
+    <view class='detail'>
+      <text class='detail-text'>
+        {{detail.detail}}
+      </text>
+    </view>
+  </view>
+</view>

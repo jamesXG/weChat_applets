@@ -1,0 +1,53 @@
+/*搜索  */
+@import "../tpl/list/list.wxss";
+.search {
+  position: relative;
+  width: 95%;
+  margin: 45rpx auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.search-input {
+  width: 80%;
+  background: #f6f6f6;
+  padding: 15rpx;
+  font-size: 11pt;
+}
+
+.search-icon, .clear-icon {
+  width: 10%;
+  padding: 15rpx;
+  background: #f6f6f6;
+  display: flex;
+}
+
+.search-icon {
+  border-radius: 30rpx 0 0 30rpx;
+}
+
+.clear-icon {
+  border-radius: 0 30rpx 30rpx 0;
+}
+
+.icon {
+  margin: auto;
+}
+/*找不到内容  */
+
+.search-null {
+  display: flex;
+  flex-direction: column;
+  color: #888;
+}
+
+.search-null > image {
+  width: 350rpx;
+  height: 386rpx;
+  margin: 80rpx auto 0 auto;
+}
+
+.search-null > text {
+  margin: 20rpx auto;
+  font-size: 14pt;
+}

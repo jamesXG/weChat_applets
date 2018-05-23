@@ -1,0 +1,92 @@
+{
+	"description": "河南理工大学校园导航",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.94",
+	"appid": "wx96003218eadca372",
+	"projectname": "河南理工学院",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 8,
+			"list": [
+				{
+					"id": -1,
+					"name": "详情页",
+					"pathName": "pages/detail/detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "搜索",
+					"pathName": "pages/search/search",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "搜索",
+					"pathName": "pages/search/search",
+					"query": "学院"
+				},
+				{
+					"id": -1,
+					"name": "路径导航",
+					"pathName": "pages/path/path",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "导航",
+					"pathName": "pages/navigate/navigate",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "导航详情",
+					"pathName": "pages/path/detail/detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "公交",
+					"pathName": "pages/bus/bus",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "校园简介",
+					"pathName": "pages/campus/campus",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "导航首页",
+					"pathName": "pages/index/index",
+					"query": ""
+				}
+			]
+		}
+	}
+}

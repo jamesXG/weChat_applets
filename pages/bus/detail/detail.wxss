@@ -1,0 +1,5 @@
+@import "../../tpl/paths/paths.wxss";
+.container{
+    background: #eee;
+    padding: 20rpx 0;
+}

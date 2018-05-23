@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="main">
+    <view class="list" wx:for="{{pathList}}" wx:key="item.duration_1m" data-id="{{item.bounds}}" bindtouchstart="bindDetailPlan">
+      <view class="detail">
+        <view class="path">
+          <block wx:for="{{item.steps}}" wx:key="{{item.duration}}" wx:if="{{item.mode=='TRANSIT'}}">
+            <block wx:for="{{item.lines}}" wx:for-item="itemline" wx:for-index="indexline" wx:key="{{itemline.title}}" wx:if="{{indexline == 0}}">
+              <text class="path-item">{{itemline.title}}{{forwardSymbol}}</text>
+            </block>
+          </block>
+          <text class="end-site">终点</text>
+        </view>
+        <block wx:for="{{snap}}" wx:key="{{item.duration}}" wx:for-item="element" wx:for-index="key" wx:if="{{index == key}}">
+          <text class="distance">向{{element.direction}}步行{{element.distance}}米</text>
+            <text class="geton">在{{element.getOn}}上车</text>
+        </block>
+      </view>
+      <view class="duration">
+        <text>{{item.duration}}</text>
+      </view>
+    </view>
+  </view>
+</view>

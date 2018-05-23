@@ -1,0 +1,64 @@
+.main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper {
+  height: 400rpx;
+  width: 100%;
+  background: #eee
+}
+
+.swiper-box {
+  overflow-x: hidden;
+}
+
+.banner-item {
+  height: 100%;
+  width: 100%;
+}
+
+.banner-item image {
+  height: 100%;
+  width: 100%;
+}
+/*简介文字  */
+.location-name {
+  background: #fff;
+  color: #e64340;
+  font-size: 17pt;
+  padding: 50rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.item{
+  display: flex;
+  flex-direction: column
+}
+.eng_name{
+  font-size: 11pt;
+  margin-top: 10rpx
+}
+.navigation-img {
+  margin: auto 20rpx auto 0;
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.detail {
+  width: 100%;
+  margin: auto;
+  background: #f6f6f6;
+}
+
+.detail-text {
+  display: block;
+  width: 90%;
+  margin: auto;
+  font-size: 10pt;
+  color: #353535;
+  word-break: break-all;
+  letter-spacing: 2rpx;
+  line-height: 18pt;
+}
